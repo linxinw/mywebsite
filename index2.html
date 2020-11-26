@@ -1,0 +1,263 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta keywords="HTML5 CSS transform">
+    <meta content=" animation属性效果展示">
+    <title>My Hello World</title>
+    <!-- <embed src="bgm/Queen - We Are The Champions .mp3" hidden="true"> -->
+    <!-- <style type="text/css">
+        html,
+        body,
+        ul.thumb,
+        ul.thumb li {
+            padding: 0;
+            margin: 0;
+        }
+        
+        html,
+        body,
+        ul.thumb {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        ul.thumb {
+            position: relative;
+            list-style: none;
+            background: webkit-gradient(radial, 45 45, 50, 50 10, 640, from(#444), to(#333)) !important;
+            background: rgb(240, 205, 6);
+        }
+        
+        ul.thumb li {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            padding: 6px 6px 24px 6px;
+            background: #FFF;
+            width: 150px;
+            height: 130px;
+            -moz-box-shadow: 1px 1px 6px #222;
+            -webkit-box-shadow: 1px 1px 6px #222;
+            box-shadow: 1px 1px 6px #222;
+            -webkit-transition: all 3s ease-in-out;
+            z-index: 0;
+        }
+        
+        ul.thumb li img {
+            width: 100%;
+            height: 100%;
+        }
+        
+        ul.thumb li:nth-child(1) {
+            margin-top: -130px;
+            margin-left: -130px;
+            -moz-transform: rotate(30deg);
+            -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+            -webkit-filter: blur(5px);
+        }
+        
+        ul.thumb li:nth-child(2) {
+            margin-top: -120px;
+            margin-left: -10px;
+            -moz-transform: rotate(19deg);
+            -webkit-transform: rotate(19deg);
+            transform: rotate(19deg);
+            -webkit-filter: blur(4px);
+        }
+        
+        ul.thumb li:nth-child(3) {
+            margin-top: -10px;
+            margin-left: -180px;
+            -moz-transform: rotate(-10deg);
+            -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+            -webkit-filter: blur(3px);
+        }
+        
+        ul.thumb li:nth-child(4) {
+            margin-top: -50px;
+            margin-left: -80px;
+            -moz-transform: rotate(12deg);
+            -webkit-transform: rotate(12deg);
+            transform: rotate(12deg);
+            -webkit-filter: blur(2px);
+        }
+        
+        ul.thumb li:nth-child(5) {
+            margin-top: 20px;
+            margin-left: 30px;
+            -moz-transform: rotate(-20deg);
+            -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+            -webkit-filter: blur(1px);
+        }
+        
+        ul.thumb li:nth-child(6) {
+            margin-top: 60px;
+            margin-left: 60px;
+            -moz-transform: rotate(-8deg);
+            -webkit-transform: rotate(-8deg);
+            transform: rotate(-8deg);
+            -webkit-filter: blur(1px);
+        }
+        
+        ul.thumb li:nth-child(7) {
+            margin-top: -15px;
+            margin-left: -50px;
+            -moz-transform: rotate(-25deg);
+            -webkit-transform: rotate(-25deg);
+            transform: rotate(-25deg);
+            -webkit-filter: blur(1px);
+        }
+        
+        ul.thumb li:nth-child(8) {
+            margin-top: -100px;
+            margin-left: 30px;
+            -moz-transform: rotate(50deg);
+            -webkit-transform: rotate(50deg);
+            transform: rotate(50deg);
+            -webkit-filter: blur(1px);
+        }
+        
+        ul.thumb li:nth-child(9) {
+            margin-top: 150px;
+            margin-left: 30px;
+            -moz-transform: rotate(-20deg);
+            -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+            -webkit-filter: blur(1px);
+        }
+        
+        ul.thumb li:nth-child(10) {
+            margin-top: 20px;
+            margin-left: -90px;
+            -moz-transform: rotate(-20deg);
+            -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+            -webkit-filter: blur(1px);
+        }
+        
+        ul.thumb li:hover {
+            z-index: 10;
+            width: 480px;
+            height: 322px;
+            margin-top: -151px;
+            margin-left: -240px;
+            -moz-box-shadow: 8px 8px 24px #111;
+            -webkit-box-shadow: 8px 8px 24px #111;
+            box-shadow: 8px 8px 24px #111;
+            -moz-transform: rotate(0deg);
+            -webkit-transform: rotate(0deg);
+            -webkit-filter: blur(0px);
+            transform: rotate(0deg);
+        }
+        
+        li :hover {
+            cursor: pointer;
+        }
+    </style> -->
+    <style>
+        body {
+            perspective: 1000px;
+            background: rgb(240, 205, 6);
+        }
+        
+        section {
+            position: relative;
+            width: 250px;
+            height: 150px;
+            margin: 150px auto;
+            transform-style: preserve-3d;
+            animation: rotate 40s linear infinite;
+            background: url(img/gj1.jpg) no-repeat;
+        }
+        
+        section:hover {
+            animation-play-state: paused;
+        }
+        
+        @keyframes rotate {
+            0% {
+                transform: rotateY(0);
+            }
+            100% {
+                transform: rotateY(360deg);
+            }
+        }
+        
+        section div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        section div:nth-child(1) {
+            transform: rotateY(0) translateZ(300px);
+            background: url(img/gj1.jpg) no-repeat;
+        }
+        
+        section div:nth-child(2) {
+            transform: rotateY(60deg) translateZ(300px);
+            background: url(img/gj1.jpg) no-repeat;
+        }
+        
+        section div:nth-child(3) {
+            transform: rotateY(120deg) translateZ(300px);
+            background: url(img/gj1.jpg) no-repeat;
+        }
+        
+        section div:nth-child(4) {
+            transform: rotateY(180deg) translateZ(300px);
+            background: url(img/gj1.jpg) no-repeat;
+        }
+        
+        section div:nth-child(5) {
+            transform: rotateY(240deg) translateZ(300px);
+            background: url(img/gj1.jpg) no-repeat;
+        }
+        
+        section div:nth-child(6) {
+            transform: rotateY(300deg) translateZ(300px);
+            background: url(img/gj1.jpg) no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <!-- <ul class="thumb">
+        <li> <img src="img/gj1.jpg" width="480" height="322"> </li>
+        <li> <img src="img/gj2.jpg" width="480" height="322"> </li>
+        <li> <img src="img/gj3.jpg" width="480" height="322"> </li>
+        <li> <img src="img/gj4.jpg" width="480" height="322"> </li>
+        <li> <img src="img/gj5.jpg" width="480" height="322"> </li>
+        <li> <img src="img/gj6.jpg" width="480" height="322"> </li>
+        <li> <img src="img/gj7.jpg" width="480" height="322"> </li>
+        <a href="index.html">
+            <li> <img src="img/gj8.jpg" width="480" height="322"> </li> -->
+    </a>
+    <h2>欢迎来到林新纬的个人网站--<br> 这是一名2020级计算机应用技术应届生的个人网站
+        <br> 每一个小li都指引向不同的项目设计 <br> 它们可能很粗糙 可能很简陋 请多多指教
+        <br> Design by lxw
+    </h2>
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+
+    </ul>
+</body>
+
+</html>
