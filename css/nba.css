@@ -1,0 +1,232 @@
+.bg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/*版心样式*/
+
+.container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    overflow: scroll;
+}
+
+
+/*版心中列表样式*/
+
+.list {
+    width: 1017px;
+    height: auto;
+    overflow: hidden;
+    padding: 20px 20px 20px 23px;
+    margin: 0 auto;
+    background: rgba(135, 190, 238, 0.4);
+    border-radius: 5px;
+    position: relative;
+}
+
+
+/*列表左侧样式*/
+
+.list .left {
+    width: 700px;
+    height: auto;
+    overflow: hidden;
+    float: left;
+}
+
+
+/*列表左侧新闻头部样式*/
+
+.news .head {
+    width: 100%;
+    height: 50px;
+    background: rgba(9, 54, 93, 0.8);
+    border-radius: 25px;
+}
+
+.news .head span {
+    display: block;
+    float: left;
+    height: 50px;
+    font: 14px/50px 'microsoft yahei';
+    color: #FFF;
+    margin-left: 15px;
+}
+
+.news .head a {
+    display: block;
+    float: left;
+    height: 50px;
+    font: 14px/50px 'microsoft yahei';
+    color: #FFF;
+    margin-left: 8px;
+}
+
+
+/*列表左侧新闻主体样式*/
+
+.news .major .tab .fatherbox {
+    display: block;
+    width: 100%;
+    height: atuo;
+    overflow: hidden;
+    border-bottom: 1px dotted #494949;
+    margin-bottom: 20px;
+}
+
+.news .major .tab .fatherbox .sonbox {
+    display: block;
+    width: 155px;
+    height: 140px;
+    overflow: hidden;
+    float: left;
+    position: relative;
+    background-color: #000;
+}
+
+.news .major .tab .fatherbox .sonbox img {
+    display: block;
+    width: 156px;
+    height: 140px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition-duration: 0.2s;
+    filter: alpha(opacity=80);
+    -moz-opacity: 0.8;
+    -khtml-opacity: 0.8;
+    opacity: 0.8;
+}
+
+.news .major .tab .fatherbox .sonbox img:hover {
+    display: block;
+    width: 170px;
+    height: 155px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition-duration: 0.2s;
+    filter: alpha(opacity=80);
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1
+}
+
+.news .major .tab .fatherbox .news-text {
+    display: block;
+    float: right;
+    width: 520px;
+    height: 140px;
+}
+
+.news .major .tab .fatherbox .news-text h2 {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    color: #FFF;
+    padding-bottom: 10px;
+    font: 24px/35px 'microsoft yahei';
+    transition-duration: 0.2s;
+}
+
+.news .major .tab .fatherbox .news-text h2:hover {
+    color: rgb(231, 25, 163);
+}
+
+.news .major .tab .fatherbox .news-text h3 {
+    display: block;
+    width: 100%;
+    height: 58px;
+    overflow: hidden;
+    font: 14px/20px 'microsoft yahei';
+    color: #c3c1c1;
+}
+
+.list .right {
+    width: 270px;
+    height: atuo;
+    overflow: hidden;
+    float: right;
+}
+
+.list .right .bt {
+    width: 100%;
+    height: 50px;
+    font: 16px/50px 'microsoft yahei';
+    color: #fff;
+}
+
+.list .right .bt:hover {
+    color: rgb(231, 25, 163);
+}
+
+.list .right .hot span {
+    display: block;
+    width: 240px;
+    height: 30px;
+    font: 14px/30px 'microsoft yahei';
+    color: #a4a4a4;
+    float: right;
+    overflow: hidden;
+    transition-duration: 0.2s;
+}
+
+.list.right.ad {
+    display: block;
+    width: 240px;
+    height: 30px;
+    float: right;
+}
+
+.list .right .lyb span {
+    display: block;
+    width: 240px;
+    height: 30px;
+    font: 14px/30px 'microsoft yahei';
+    color: #d3d1d1;
+    float: right;
+    overflow: hidden;
+    transition-duration: 0.2s;
+}
+
+.qrcode {
+    width: 1060px;
+    height: 200px;
+    margin: 60px auto 20px auto;
+    text-align: center;
+}
+
+.qrcode .style {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    margin: 0 20px;
+}
+
+.qrcode .style img {
+    display: block;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+.qrcode .style span {
+    display: block;
+    width: 150px;
+    height: 30px;
+    margin: 10px auto 0 auto;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    color: #fff;
+}
