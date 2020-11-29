@@ -1,0 +1,46 @@
+li {
+    list-style: none;
+}
+
+.lift_nav {
+    position: fixed;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    display: none;
+}
+
+.lift_nav ul li {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    padding: 10px 10px;
+    border-bottom: 1px solid rgb(202, 198, 198);
+    background: #fff;
+    cursor: pointer;
+}
+
+.lift_nav ul li img {
+    width: 60%;
+    height: 60%
+}
+
+.qrcode {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    top: 30px;
+    left: -100px;
+    display: none;
+}
+
+.qrcode1 {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    top: 110px;
+    left: -100px;
+    display: none;
+}
