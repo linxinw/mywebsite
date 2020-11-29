@@ -8,6 +8,7 @@
     margin-top: 0;
     margin-left: 120px;
     background-color: #ccc;
+    cursor: pointer;
 }
 
 .content img {
@@ -28,6 +29,7 @@
     height: 20px;
     border-radius: 25px;
     right: 40%;
+    cursor: pointer;
 }
 
 .points li {
