@@ -126,6 +126,16 @@ a {
     margin-left: 30px;
     font-size: 14px;
     color: #666;
+    display: none;
+}
+
+.user-btn {
+    float: left;
+    height: 42px;
+    line-height: 42px;
+    margin-left: 30px;
+    font-size: 14px;
+    color: #666;
 }
 
 

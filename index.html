@@ -12,15 +12,21 @@
 	<![endif]-->
 <!-- <link rel="stylesheet" href="/bootstrap/bootstrap-css/bootstrap.min.css" /> -->
 <link rel="stylesheet" type="text/css" href="/css/sidebar.css" />
-<script src="/js/jquery-3.5.1.js"></script>
-<script src="/js/LoopSlider.js"></script>
-
-<script src="/js/jquery-3.5.1.js"></script>
-<script src="/js/layer.js"></script>
 <link rel="stylesheet" href="/css/lbt.css" />
 <link rel="stylesheet" href="/css/layer.css" />
+<link rel="stylesheet" href="/css/layui.css" />
+<script src="/js/jquery-3.5.1.js"></script>
+<script src="/js/LoopSlider.js"></script>
+<script src="/js/jquery-3.5.1.js"></script>
+<script src="/js/layer.js"></script>
+
+<style>
+
+</style>
 
 <body>
+
+
     <!-- header头部模块开始 -->
     <div class="header w">
         <!-- logo -->
@@ -43,7 +49,11 @@
         </div>
         <!-- user -->
         <div class="user">
-            <img src="images/user.jpg" alt=""> linxinwei
+            <img src="images/user.jpg" alt=""> <span id="name"></span>
+        </div>
+        <div class="user-btn">
+            <button class="layui-btn layui-btn-radius layui-btn-primary" id="btn-log">登录</button>
+            <button class="layui-btn layui-btn-radius layui-btn-primary" id="btn-login">注册</button>
         </div>
     </div>
     <!-- header头部模块结束 -->
@@ -283,6 +293,62 @@
         duration: 300, //过渡时间，默认为3000ms,
         autoplay: 2000, //boolean 和 number 设置为true 默认延时为3s,如果设置为1000，延时为1s
     })
+    $("#btn-log").click(function() {
+        console.log('dinaj');
+        layer.open({
+            title: '登录',
+            shade: 0,
+            type: 1,
+            skin: 'layui-layer-rim', //加上边框
+            area: ['420px', '240px'], //宽高
+            content: ' <input type="text" placeholder="请输入用户名" id="username" style="outline: none; background-color:rgb(236, 232, 232);width: 320px;height: 30px;border: 1;  border-radius: 15px;  margin-left: 50px;margin-top: 30px;"><input type="text" placeholder="请输入密码" id="psd" style="outline: none; background-color:rgb(236, 232, 232);width: 320px;height: 30px;border: 1;  border-radius: 15px; margin-left: 50px; margin-top:15px"><br><input type="button" value="提交" onclick="login()" class="layui-btn layui-btn-radius layui-btn-primary" style="margin-left:180px;margin-top:10px;" >'
+        });
+    })
+
+    function login() {
+        console.log('aaa')
+        var nameVal = $("#username").val();
+        var ageVal = $("#psd").val();
+        $.ajax({
+            url: '/php/api.php',
+            type: 'post',
+            dataType: 'json',
+            data: {
+                name: nameVal,
+                age: ageVal,
+            },
+            success: function(res) {
+                console.log(res);
+                if (res.status == 0) {
+                    layer.alert(res.msg, {
+                        skin: 'layui-layer-lan',
+                        closeBtn: 0,
+                        anim: 4 //动画类型
+                    });
+                } else {
+
+                    layer.alert(res.msg, {
+                        skin: 'layui-layer-lan',
+                        closeBtn: 0,
+                        anim: 4 //动画类型
+                    });
+                    var zz = res.msg;
+                    $('#name').html(zz);
+                    $('#layui-layer1').css("display", "none");
+                    $('.user').css("display", "block");
+                    $('.user-btn').css("display", "none");
+                }
+
+
+
+
+            },
+            error: function(error) {
+                console.log(error)
+            }
+        });
+
+    }
 
     $(".content img").click(function() {
         layer.msg('这只是一个图片');
