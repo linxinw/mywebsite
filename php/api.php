@@ -1,0 +1,26 @@
+<?php
+$res = $_REQUEST;
+
+$final['data'] = ['server_msg'=>'我是来自服务端的数据'.rand(0,100)];
+
+if(!$res['name']){
+    $final['status'] = 0;
+    $final['msg'] = '请输入姓名';
+    echo json_encode($final,JSON_UNESCAPED_UNICODE);
+    die;
+}
+
+if(!$res['age']){
+    $final['status'] = 0;
+    $final['msg'] = '请输入密码';
+    echo json_encode($final,JSON_UNESCAPED_UNICODE);
+    die;
+}
+
+$final['status'] = 1;
+$final['msg'] = $res['name'];
+echo json_encode($final,JSON_UNESCAPED_UNICODE);
+die;
+
+
+
